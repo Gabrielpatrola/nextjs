@@ -1,6 +1,6 @@
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-injectGlobal`
+createGlobalStyle`
   body {
     background: #f5f5f5;
   }
