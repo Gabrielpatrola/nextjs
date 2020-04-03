@@ -3,6 +3,7 @@ import axios from "axios";
 import Head from "next/head";
 
 import { Link } from "../routes";
+import withAnalytics from "../src/hocs/withAnalytics";
 
 const Users = ({ users }) => (
   <div>
@@ -31,4 +32,4 @@ Users.getInitialProps = async () => {
   return { users: response.data };
 };
 
-export default Users;
+export default withAnalytics()(Users);
